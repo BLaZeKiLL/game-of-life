@@ -17,7 +17,9 @@ export class AppElement extends HTMLElement {
   private width = 236;
   private height = 128;
 
-  connectedCallback() {
+  async connectedCallback() {
+    await import('game-of-life'); // wait for wasm module to load, should be better way
+
     this.innerHTML = `<canvas id="${this.ID}"></canvas>`;
 
     const canvas = document.getElementById(this.ID) as HTMLCanvasElement;
