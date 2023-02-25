@@ -33,7 +33,7 @@ jobs:
       working-directory: ./www
       
     - name: Build website
-      run: yarn nx run app-game-of-life:build:production
+      run: yarn nx run app-game-of-life:build:production --base=/game-of-life
       working-directory: ./www
 
     - name: Upload artifact
