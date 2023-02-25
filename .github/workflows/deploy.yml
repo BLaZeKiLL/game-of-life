@@ -25,12 +25,12 @@ jobs:
     - name: Setup wasm pack
       run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
       
-    - name: Build
-      run: wasm-pack build
-      
     - name: Install dependencies
       run: yarn install --frozen-lockfile
       working-directory: ./www
+
+    - name: Build wasm
+      run: wasm-pack build
       
     - name: Build website
       run: yarn nx run app-game-of-life:build:production
