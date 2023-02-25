@@ -10,6 +10,10 @@ export default defineConfig({
     target: 'esnext'
   },
 
+  optimizeDeps: {
+    exclude: ['game-of-life']
+  },
+
   server: {
     port: 4200,
     host: 'localhost',
