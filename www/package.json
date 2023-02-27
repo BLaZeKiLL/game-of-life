@@ -2,7 +2,10 @@
   "name": "www",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "yarn upgrade game-of-life && nx run app-game-of-life:serve:development -o",
+    "start:prod": "yarn upgrade game-of-life && nx run app-game-of-life:build:production && yarn http-server dist/apps/app-game-of-life -o"
+  },
   "private": true,
   "dependencies": {
     "core-js": "^3.6.5",
@@ -26,6 +29,7 @@
     "eslint": "~8.15.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",
+    "http-server": "^14.1.1",
     "jsdom": "~20.0.3",
     "nx": "15.7.2",
     "prettier": "^2.6.2",
