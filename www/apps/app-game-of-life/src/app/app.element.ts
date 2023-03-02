@@ -4,8 +4,8 @@ import { memory } from 'game-of-life/game_of_life_bg.wasm';
 
 const CELL_SIZE = 5; // px
 const GRID_COLOR = "#CCCCCC";
-const DEAD_COLOR = "#FFFFFF";
-const ALIVE_COLOR = "#000000";
+const DEAD_COLOR = "#990000";
+const ALIVE_COLOR = "#FFC72C";
 
 export class AppElement extends HTMLElement {
   public static observedAttributes = [];
