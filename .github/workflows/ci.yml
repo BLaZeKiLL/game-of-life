@@ -23,7 +23,9 @@ jobs:
         cache-dependency-path: '**/yarn.lock'
         
     - name: Setup wasm pack
-      run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+      run: |
+        curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+        wasm-pack --version
       
     - name: Build wasm
       run: wasm-pack build
