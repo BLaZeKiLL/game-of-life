@@ -18,8 +18,6 @@ export class AppElement extends HTMLElement {
   private height = 128;
 
   async connectedCallback() {
-    await import('game-of-life'); // wait for wasm module to load, should be better way - https://github.com/rustwasm/wasm-pack/pull/1224
-
     this.innerHTML = `<canvas id="${this.ID}"></canvas>`;
 
     const canvas = document.getElementById(this.ID) as HTMLCanvasElement;
